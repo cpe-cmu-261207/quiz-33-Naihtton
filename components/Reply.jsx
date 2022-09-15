@@ -4,7 +4,7 @@ export default function Reply(props) {
   return (
   <div className="d-flex gap-2 my-2 ps-5">
   <img
-    src="/profileImages/puppy.jpg"
+    src={props.a.userImagePath}
     width="48"
     height="48"
     className="rounded-circle"
@@ -19,10 +19,14 @@ export default function Reply(props) {
     </span>
     <br />
     <span style={{ color: "#E4E6EB" }}>{props.a.replyText}</span>
-    <div className="d-flex align-items-center gap-1">
-              <img src="/like.svg" width={20}></img>
-              <span style={{ color: "#B0B3B8" }}>{props.a.likeNum} คน</span>
-            </div>
+    {props.a.likeNum > 0 &&(
+      <div className="d-flex align-items-center gap-1">
+      <img src="/like.svg" width={20}></img>
+      <span style={{ color: "#B0B3B8" }}>{props.a.likeNum} คน</span>
+    </div>
+    )}
+
+    
   </div>
 </div>
   );

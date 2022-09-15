@@ -21,8 +21,7 @@ export default function Comment(props) {
               {props.a.username}
             </span>
             <br />
-            <span>{props.a.commentText}</span>
-            <span style={{ color: "#E4E6EB" }}>จริงค่า</span>
+            <span style={{ color: "#E4E6EB" }}>{props.a.commentText}</span>
             <div className="d-flex align-items-center gap-1">
               <img src="/like.svg" width={20}></img>
               <span style={{ color: "#B0B3B8" }}>{props.a.likeNum} คน</span>
